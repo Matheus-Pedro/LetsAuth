@@ -15,9 +15,11 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class AuthListener implements Listener {
 
     private final AuthManager auth;
+    private final int timeout;
 
-    public AuthListener(AuthManager auth) {
+    public AuthListener(AuthManager auth, int timeout) {
         this.auth = auth;
+        this.timeout = timeout;
     }
 
     @EventHandler
@@ -29,7 +31,7 @@ public class AuthListener implements Listener {
 
         // Inicia o contador de kicks
         new BukkitRunnable() {
-            int seconds = 60; // tempo limite em segundos
+            int seconds = timeout; // tempo limite em segundos
 
             @Override
             public void run() {

@@ -32,7 +32,13 @@ public final class LetsAuth extends JavaPlugin {
         getCommand("register").setExecutor(new RegisterCommand(db));
         getCommand("login").setExecutor(new LoginCommand(db, auth));
 
-        getServer().getPluginManager().registerEvents(new AuthListener(auth), this);
+        try {
+            int timeout = getConfig().getInt("timeout");
+            getServer().getPluginManager().registerEvents(new AuthListener(auth, timeout), this);
+        } catch (Exception e) {
+            getLogger().severe("Erro ao conectar no banco de dados!");
+            return;
+        }
 
 
         getLogger().info("LetsAuth iniciado!");

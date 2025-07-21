@@ -1,5 +1,5 @@
 name: LetsAuth
-version: '1.1-SNAPSHOT'
+version: '1.2-SNAPSHOT'
 main: org.caprioli.letsAuth.LetsAuth
 api-version: '1.20'
 commands:
