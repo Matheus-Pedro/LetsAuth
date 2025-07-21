@@ -1,0 +1,11 @@
+name: LetsAuth
+version: '1.1-SNAPSHOT'
+main: org.caprioli.letsAuth.LetsAuth
+api-version: '1.20'
+commands:
+  register:
+    description: Registra o jogador
+    usage: /register <senha>
+  login:
+    usage: /login <senha>
+    description: Faz login

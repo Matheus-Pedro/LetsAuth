@@ -1,0 +1,7 @@
+org/caprioli/letsAuth/commands/RegisterCommand.class
+org/caprioli/letsAuth/AuthListener$1.class
+org/caprioli/letsAuth/AuthManager.class
+org/caprioli/letsAuth/commands/LoginCommand.class
+org/caprioli/letsAuth/DatabaseManager.class
+org/caprioli/letsAuth/LetsAuth.class
+org/caprioli/letsAuth/AuthListener.class
